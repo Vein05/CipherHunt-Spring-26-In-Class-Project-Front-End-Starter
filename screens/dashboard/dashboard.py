@@ -1,3 +1,4 @@
+import os
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 from kivy.app import App
@@ -14,7 +15,7 @@ class DashboardScreen(Screen):
         super().__init__(**kw)
         
         path = App.get_running_app().base_path
-        Builder.load_file(path + "\\screens\\dashboard\\dashboard.kv")
+        Builder.load_file(os.path.join(path, 'screens', 'dashboard', 'dashboard.kv'))
         
         self.rank_percent_complete = self.rank_points / self.next_rank_points
 

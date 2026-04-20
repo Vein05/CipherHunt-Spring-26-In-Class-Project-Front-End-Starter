@@ -24,12 +24,12 @@ class MultiScreenApp(App):
     def build(self):
         LabelBase.register(
             name='AppFont', 
-            fn_regular=self.resource_path + "\\fonts\\ibm_plex_sans\\" + 'IBMPlexSans-Regular.ttf',
-            fn_bold=self.resource_path + "\\fonts\\ibm_plex_sans\\" + 'IBMPlexSans-Bold.ttf',
-            fn_italic=self.resource_path + "\\fonts\\ibm_plex_sans\\" + 'IBMPlexSans-Italic.ttf'
+            fn_regular=os.path.join(self.resource_path, 'fonts', 'ibm_plex_sans', 'IBMPlexSans-Regular.ttf'),
+            fn_bold=os.path.join(self.resource_path, 'fonts', 'ibm_plex_sans', 'IBMPlexSans-Bold.ttf'),
+            fn_italic=os.path.join(self.resource_path, 'fonts', 'ibm_plex_sans', 'IBMPlexSans-Italic.ttf')
         ) 
 
-        Builder.load_file(self.resource_path + "\\stylesheets\\style.kv")
+        Builder.load_file(os.path.join(self.resource_path, 'stylesheets', 'style.kv'))
         self.shell = AppShell()
         self.shell.set_dashboard()
         
@@ -44,7 +44,7 @@ class MultiScreenApp(App):
 
     @property
     def resource_path(self):
-        return self.base_path + "\\resources"
+        return os.path.join(self.base_path, 'resources')
 
 
 if __name__ == "__main__":

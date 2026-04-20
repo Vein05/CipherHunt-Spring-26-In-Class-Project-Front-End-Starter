@@ -2,5 +2,171 @@
 #:import utils kivy.utils
 
 <LabScreen>:
-    Label:
-        text: "This is the Lab screen"
+    canvas.before:
+        Color:
+            rgba: utils.get_color_from_hex("#5E6F98")
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    FloatLayout:
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: 0.72, 0.78
+            pos_hint: {"center_x": 0.5, "center_y": 0.53}
+            spacing: "0dp"
+            padding: "0dp"
+
+            canvas.before:
+                Color:
+                    rgba: utils.get_color_from_hex("#384F77")
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            BoxLayout:
+                size_hint_y: None
+                height: "50dp"
+                padding: "6dp", 0
+                canvas.before:
+                    Color:
+                        rgba: utils.get_color_from_hex("#384F77")
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Label:
+                    text: "Create New Clue"
+                    font_name: "AppFont"
+                    color: 1, 1, 1, 1
+                    font_size: "21sp"
+                    bold: False
+                    halign: "center"
+                    valign: "middle"
+                    text_size: self.size
+
+            BoxLayout:
+                size_hint_y: None
+                height: "4dp"
+                canvas.before:
+                    Color:
+                        rgba: utils.get_color_from_hex("#AAB5CF")
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+            BoxLayout:
+                orientation: "vertical"
+                padding: "1.5dp"
+                spacing: "0dp"
+                canvas.before:
+                    Color:
+                        rgba: utils.get_color_from_hex("#FFFFFF")
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Label:
+                    text: "What is your clue?"
+                    font_name: "AppFont"
+                    color: 0.23, 0.27, 0.35, 1
+                    font_size: "18sp"
+                    halign: "left"
+                    valign: "top"
+                    text_size: self.size
+                    size_hint_y: None
+                    height: "28dp"
+
+                Widget:
+                    size_hint_y: None
+                    height: "2dp"
+
+                TextInput:
+                    text: ""
+                    hint_text: ""
+                    font_name: "AppFont"
+                    multiline: True
+                    background_normal: ""
+                    background_active: ""
+                    background_color: 0, 0, 0, 0
+                    foreground_color: 0.22, 0.22, 0.25, 1
+                    cursor_color: 0.22, 0.22, 0.25, 1
+                    padding: "6dp", "6dp"
+
+                    canvas.before:
+                        Color:
+                            rgba: 1, 1, 1, 1
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+            BoxLayout:
+                size_hint_y: None
+                height: "3dp"
+                canvas.before:
+                    Color:
+                        rgba: utils.get_color_from_hex("#384F77")
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+            BoxLayout:
+                size_hint_y: None
+                height: "50dp"
+                padding: "4dp"
+
+                canvas.before:
+                    Color:
+                        rgba: utils.get_color_from_hex("#E7E7E7")
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Label:
+                    text: "Enter Key Here..."
+                    font_name: "AppFont"
+                    color: 0.15, 0.15, 0.15, 1
+                    font_size: "18sp"
+                    halign: "center"
+                    valign: "middle"
+                    text_size: self.size
+
+            Widget:
+                size_hint_y: None
+                height: "6dp"
+
+            BoxLayout:
+                size_hint_y: None
+                height: "64dp"
+                padding: "0dp", "2dp"
+                canvas.before:
+                    Color:
+                        rgba: utils.get_color_from_hex("#384F77")
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Widget:
+                    size_hint_x: 0.28
+
+                Button:
+                    text: "Create"
+                    font_name: "AppFont"
+                    size_hint: 0.44, None
+                    height: "54dp"
+                    background_normal: ""
+                    background_down: ""
+                    background_color: 0, 0, 0, 0
+                    color: 0, 0, 0, 1
+                    font_size: "19sp"
+                    bold: True
+
+                    canvas.before:
+                        Color:
+                            rgba: utils.get_color_from_hex("#BFD2E8")
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                Widget:
+                    size_hint_x: 0.28

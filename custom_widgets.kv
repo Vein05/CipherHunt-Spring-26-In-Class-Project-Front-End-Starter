@@ -13,7 +13,7 @@
     background_color: utils.get_color_from_hex("#F4F4F4") if not root.is_active else utils.get_color_from_hex("#BAC0E6")
 
     Image:
-        source: f"{app.resource_path}\\icons\\{root.image_filename}" # Replace with your actual filename
+        source: f"{app.resource_path}/icons/{root.image_filename}" # Replace with your actual filename
         center: self.parent.center
         size_hint: None, None
         size: (root.height * 0.6, root.height * 0.6)

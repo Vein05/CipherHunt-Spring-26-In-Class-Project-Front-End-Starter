@@ -1,3 +1,4 @@
+import os
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 from kivy.app import App
@@ -10,5 +11,5 @@ class LabScreen(Screen):
         super().__init__(**kw)
         
         path = App.get_running_app().base_path
-        Builder.load_file(path + "\\screens\\lab\\lab.kv")
+        Builder.load_file(os.path.join(path, 'screens', 'lab', 'lab.kv'))
 

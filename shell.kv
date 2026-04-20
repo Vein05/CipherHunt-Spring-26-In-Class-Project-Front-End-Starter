@@ -20,7 +20,7 @@
                 pos: self.pos
 
         Image:
-            source: app.resource_path + "\\icons\\key-solid.png"
+            source: app.resource_path + "/icons/key-solid.png"
             size_hint: (None, None)
             size: ('30dp', '30dp')
             pos_hint: {'center_y': 0.5}
@@ -47,7 +47,7 @@
             on_release: root.change_screen("settings")
 
             Image:
-                source: app.resource_path + "\\icons\\gear-solid.png"
+                source: app.resource_path + "/icons/gear-solid.png"
                 center: self.parent.center
                 size_hint: None, None
                 size: ('30dp', '30dp')
