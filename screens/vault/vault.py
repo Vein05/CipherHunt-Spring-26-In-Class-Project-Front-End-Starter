@@ -13,5 +13,6 @@ class VaultScreen(Screen):
             app = App.get_running_app()
             assert app is not None
 
+            self.clue_model = app.clue_model
             path = app.base_path
             Builder.load_file(os.path.join(path, 'screens', 'vault', 'vault.kv'))

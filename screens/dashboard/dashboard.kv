@@ -7,7 +7,7 @@
         orientation: 'vertical'
 
         Label:
-            text: f"[b]Welcome Back,\n{root.username}[/b]"
+            text: f"[b]Welcome Back[/b],\n{root.username}"
             markup: True
             size_hint: (1, None)
             height: '100dp'
@@ -16,7 +16,7 @@
             halign: 'center'
 
         Label:
-            text: f"[b]Rank: {root.rank}[/b]"
+            text: f"[b]Rank: {root.rank_name}[/b]"
             markup: True
             size_hint: (1, None)
             height: '150dp'
@@ -38,13 +38,13 @@
                 Color:
                     rgba: progress_bar_color_2
                 RoundedRectangle:
-                    size: (self.width * root.rank_percent_complete, self.height)
+                    size: (self.width * 0.6, self.height)#(self.width * root.rank_percent_complete, self.height)
                     pos: self.pos
                     # top-left, top-right, bottom-right, bottom-left
                     radius: [11, 0, 0, 11]
                 
         Label:
-            text: f"[b]{root.rank_points}/{root.next_rank_points}[/b]"
+            text: f"[b]45/100[/b]"
             markup: True
             size_hint: (1, None)
             height: '50dp'

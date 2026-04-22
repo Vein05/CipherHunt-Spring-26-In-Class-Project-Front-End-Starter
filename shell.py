@@ -16,6 +16,9 @@ class AppShell(BoxLayout):
     def change_screen(self, screen):
         self.screen_manager.current = screen
 
+        if screen == "dashboard":
+            self.set_dashboard()
+
         for tab_button in self.tabs.children:
             if tab_button.route == screen:
                 tab_button.is_active = True
